@@ -1,0 +1,13 @@
+q.1 answer:- Cnum field of customer table is the primary key.
+
+q.2 answer:- 4th column of customer is Rating whose data type is int of size 4.
+
+q.3 answer:- another word for column is attribute, method.
+	     another word or row is tuple, entity.
+
+q.4 answer:- rows in the tables are in form of files
+             these files gets stored in the database server harddisk, but storing is not sequencial.
+	     according to the size of file/row and memory available file gets store at certain memory location.
+	     2 rows whivh are inserted sequencially may get stored at different memory location in harddisk.
+	     while retriving those row they comes out according to the memory address in ascending order.
+	     so, we cannot firmly say that these particular rows are the 1st 5 rows of the table.
