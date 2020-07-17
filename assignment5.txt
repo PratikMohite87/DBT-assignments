@@ -1,0 +1,14 @@
+select onum from orders where amt > 1000;
+
+select sname, city from salespeople where city='london' and comm > .10;
+
+select * from customers where Rating <= 100 or city='Rome';
+
+Select * from Orders
+where (amt < 1000 OR
+NOT (odate = ‘1990-10-03’ 	error    ('1990-10-03' will work)
+AND cnum > 2003));
+
+Select * from Orders
+where NOT ((odate = ‘1990-10-03’ OR snum      error  ('1990-10-03' will work)   
+>1006) AND amt >= 1500);
