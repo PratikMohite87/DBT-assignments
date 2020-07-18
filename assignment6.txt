@@ -2,7 +2,7 @@ select Onum from orders where Odate='1990-10-03' or Odate='1990-10-04';
 
 select Cname from customers where snum in ( select snum from salespeople where Sname='Peel' or Sname='Motika');
 
-select Cname from customers where Cname >= 'A' and Cname <= 'G';
+select Cname from customers where Cname >= 'A' and Cname <= 'H';
 
 select Cname from customers where Cname like 'C%';
 
