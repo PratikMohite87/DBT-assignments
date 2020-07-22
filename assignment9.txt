@@ -1,0 +1,10 @@
+select orders.Onum, customers.Cname from orders, customers where orders.Cnum = customers.Cnum;
+
+select salespeople.Sname, customers.Cname, orders.Onum from salespeople, customers, orders 
+where salespeople.Snum = orders.Snum and  orders.Snum = customers.Snum;
+
+select customers.Cname, salespeople.snum, comm*100 from customers, salespeople
+where customers.snum=salespeople.snum and comm>.12;
+
+select (orders.Amt*salespeople.Comm)/100 'amount of the salesperson’s commission on each order', customers.Rating from orders, salespeople, customers 
+where orders.Snum=salespeople.Snum and orders.Cnum=customers.Cnum and customers.Rating > 100;

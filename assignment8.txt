@@ -1,0 +1,7 @@
+select Onum, Snum, (12*Amt)/100 "Commission" from orders;
+
+select 'For the city', city ,',the highest rating is :', max(Rating) from customers group by city;
+
+select Rating, Cname, Cnum from customers order by Rating desc;
+
+select count(Odate) totalorder , Odate from orders group by Odate order by totalorder desc;
