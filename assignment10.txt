@@ -1,0 +1,6 @@
+select s1.Sname, s2.Sname, s1.City from salespeople s1, salespeople s2
+where s1.city = s2.city and s1.Sname > s2.Sname;
+
+select Cname, City from customers
+where Rating = (select Rating from customers 
+				where Cname='Hoffman');

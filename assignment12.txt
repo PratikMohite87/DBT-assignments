@@ -1,0 +1,12 @@
+select * from customers
+where Rating >= Any (select Rating from customers
+					where Snum in (select Snum from salespeople
+									where Sname='serres'));
+                                    
+select Snum from salespeople
+where (Snum, city) not in (select Snum, City from customers);
+
+select Onum from orders
+where Amt > Any (select Amt from orders
+				where Cnum in (select Cnum from customers
+								where city='London'));
