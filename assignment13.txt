@@ -1,0 +1,13 @@
+select Cname, City, 'Low Rating' Rating from customers where Rating <= 200
+UNION
+select Cname, City, 'High Rating' Rating from customers where Rating > 200;
+
+select s.Sname, s.Snum, c.Cname, c.Cnum from salespeople s, customers c
+where c.Snum = s.Snum and s.Snum in (select Snum from customers group by Snum having count(Snum) > 1)
+order by Sname;
+
+select Snum from salespeople where city='San Jose'
+UNION
+select Cnum from customers where city='San Jose'
+UNION
+select Onum from orders where Odate='1990-10-03';
