@@ -1,0 +1,19 @@
+NO NO YES YES
+
+create view comission
+as
+select Snum, Comm from salespeople
+where comm between .01 and .02;
+
+select * from comission;
+
+insert into comission
+values(5000,.06);
+
+select * from comission;
+
+select Snum, Comm from salespeople
+where Snum=5000 and Comm=.06;
+
+
+

@@ -1,0 +1,20 @@
+create table orders(
+	Onum int(10) primary key,
+	Cnum int(10),
+	Snum int(10),
+	primary key(Cnum,Snum)
+);
+
+
+create table salespeople(
+	Comm int(10) NOT NULL DEFAULT 0.1,
+	Snum int(10) PRIMARY KEY,
+	Sname varchar(20) check(Sname = upper(Sname)) CHECK(BETWEEN 'A' AND 'B')
+);
+
+
+create table orders(
+	Snum int(10) NOT NULL,
+	Cnum int(10) check(Cnum>Snum),
+	Onum int(10) check(Onum>Cnum)
+);

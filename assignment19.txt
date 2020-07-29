@@ -1,0 +1,26 @@
+create view highest_rating
+as
+select * from customers
+where Rating = (select max(rating) from customers);
+
+select * from highest_rating;
+
+create view no_salespeople
+as
+select city, count(Snum) from salespeople group by city;
+
+select * from no_salespeople;
+
+create view avg_order
+as
+select Sname, avg(Onum), count(Onum) from salespeople, orders
+where salespeople.Snum = orders.Snum
+group by Sname;
+
+select * from avg_order;
+
+create view namess
+as
+select Sname, Cname from salespeople, customers where salespeople.Snum = customers.Snum;
+
+select * from namess;
