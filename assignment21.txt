@@ -1,0 +1,6 @@
+grant update on customers to amit ;
+
+grant select on orders to manoj with grant option;
+
+revoke insert on salespeople from ajita;
+
